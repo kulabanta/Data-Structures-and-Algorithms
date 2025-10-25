@@ -1,7 +1,4 @@
-﻿using DsaPreparation.Tree;
-using DsaPreparation.Tree.Tree;
-using DsaPreparation.Tree.Tree.SideViews;
-using Tree.Tree.TreeTraversal;
+﻿using DsaPreparation.Tree.Tree;
 
 namespace Tree
 {
@@ -14,15 +11,9 @@ namespace Tree
             root.right = new TreeNode(3);
             root.left.left = new TreeNode(4);
             root.left.right = new TreeNode(5);
-            root.right.left = new TreeNode(6);
+            root.left.right.right = new TreeNode(6);
+            root.right.left = new TreeNode(8);
             root.right.right = new TreeNode(7);
-
-            LeftViewBinaryTree leftView = new LeftViewBinaryTree();
-            var result = leftView.GetLeftViewOfBinaryTree(root);
-            foreach (var val in result)
-            {
-                Console.WriteLine(val);
-            }
         }
 
     }

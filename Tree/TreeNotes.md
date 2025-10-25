@@ -250,3 +250,7 @@ public List<int> ZigZagLevelOrderTraversal(TreeNode root)
 ## Side views
 1. [Binary Tree Left Side View](./SideViews/LeftViewBinaryTree.cs)
 2. [Find Bottom Left Tree Value ](./SideViews/FindBottomLeftTreeValue.cs)
+3. [right view of Binary tree](./Tree/SideViews/RightSideViewBinaryTree.cs)
+4. [Top view of Binary tree](./Tree/SideViews/TopviewBinaryTree.cs)
+5. [Bottom view of Binary tree](./Tree/SideViews/FindBottomLeftTreeValue.cs)
+6. [Boundary view of Binary tree](./Tree/SideViews/BoundaryViewBinaryTree.cs)

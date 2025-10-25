@@ -8,7 +8,7 @@ namespace DsaPreparation.Tree.Tree.SideViews
 {
     public class LeftViewBinaryTree
     {
-        public List<int> GetLeftViewOfBinaryTree(TreeNode root)
+        public List<int> GetLeftViewOfBinaryTreeLevelOrderTraversal(TreeNode root)
         {
             List<int> LeftView = new();
             Queue<TreeNode> queue = new();
@@ -35,6 +35,24 @@ namespace DsaPreparation.Tree.Tree.SideViews
                 }
             }
             return LeftView;
+        }
+        public List<int> LeftSideViewDfs(TreeNode root)
+        {
+            List<int> LeftView = new();
+            LeftSideViewDfsRec(root, 0, LeftView);
+            return LeftView;
+
+        }
+        public void LeftSideViewDfsRec(TreeNode root, int level, List<int> LeftView)
+        {
+            if (root == null)
+                return;
+            if(level == LeftView.Count)
+            {
+                LeftView.Add(root.val);
+            }
+            LeftSideViewDfsRec(root.left, level + 1, LeftView);
+            LeftSideViewDfsRec(root.right, level + 1, LeftView);
         }
     }
 }
