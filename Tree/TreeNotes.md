@@ -45,39 +45,40 @@ public void PreOrderTraversalRecursive(TreeNode root,List<int> result)
 ```
 
 #### Morris Preorder Traversal
-    approach : 
-        We will create a threaded binary tree , where rightmost node in the left child of a node will point to the node itself and it will be used to go back to the node after left child traversal if finished 
-        
-        algorithm :
+**Approach** : 
+We will create a threaded binary tree , where rightmost node in the left child of a node will point to the node itself and it will be used to go back to the node after left child traversal if finished 
 
-    ``` markdown
-    ``` csharp
-        if(root.left == null)
+algorithm :
+
+``` markdown
+``` csharp
+    if(root.left == null)
+    {
+        Print(root.value);
+        root = root.right;
+    }
+    else{
+        TreeNode temp = root.left;
+        while(temp.right != null && temp.right != root)
+        {
+            temp = temp.right;
+        }
+        if(temp.right == null)
         {
             Print(root.value);
-            root = root.right;
+            // before processing the left child , add root to the result
+            temp.right = root;
+            root = root.left;
         }
         else{
-            TreeNode temp = root.left;
-            while(temp.right != null && temp.right != root)
-            {
-                temp = temp.right;
-            }
-            if(temp.right == null)
-            {
-                Print(root.value);
-                // before processing the left child , add root to the result
-                temp.right = root;
-                root = root.left;
-            }
-            else{
-                temp.right = null;
-                root = root.right;
-            }
+            temp.right = null;
+            root = root.right;
         }
-    ```
-    Time complexity : O(n)
-    Space complexity : O(1)
+    }
+```
+Time complexity : O(n) <br>
+Space complexity : O(1) <br>
+Code : [Morris Preorder Traversal](./Tree/TreeTraversal/MorrisPreOrderTraversal.cs)
 
 ### Inorder Traversal
 
@@ -133,39 +134,39 @@ public void InOrderTraversalRecursive(TreeNode root,List<int> result)
 ```
 
 #### Morris Inorder Traversal
-    approach : 
-        We will create a threaded binary tree , where rightmost node in the left child of a node will point to the node itself and it will be used to go back to the node after left child traversal if finished 
+**approach** : 
+We will create a threaded binary tree , where rightmost node in the left child of a node will point to the node itself and it will be used to go back to the node after left child traversal if finished 
         
-        algorithm :
-
-    ``` markdown
-    ``` csharp
-        if(root.left == null)
-        {
-            Print(root.value);
-            root = root.right;
-        }
-        else{
-            TreeNode temp = root.left;
-            while(temp.right != null && temp.right != root)
-            {
-                temp = temp.right;
-            }
-            if(temp.right == null)
-            {
-                temp.right = root;
-                root = root.left;
-            }
-            else{
-                Print(root.value);
-                // after processing the left child , add root to the result
-                temp.right = null;
-                root = root.right;
-            }
-        }
-    ```
-    Time complexity : O(n)
-    Space complexity : O(1)
+algorithm :
+``` markdown
+``` csharp
+if(root.left == null)
+{
+    Print(root.value);
+    root = root.right;
+}
+else{
+    TreeNode temp = root.left;
+    while(temp.right != null && temp.right != root)
+    {
+        temp = temp.right;
+    }
+    if(temp.right == null)
+    {
+        temp.right = root;
+        root = root.left;
+    }
+    else{
+        Print(root.value);
+        // after processing the left child , add root to the result
+        temp.right = null;
+        root = root.right;
+    }
+}
+```
+Time complexity : O(n) <br>
+Space complexity : O(1) <br>
+code : [Morris Inorder Traversal](./Tree/TreeTraversal/MorrisInorderTraversal.cs)
 ### Post order traversal
 left child -> right child -> root
 
