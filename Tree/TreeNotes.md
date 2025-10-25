@@ -245,3 +245,8 @@ public List<int> ZigZagLevelOrderTraversal(TreeNode root)
 3. [Same Tree](./MinimumAndMaximumDepth/SameTree.cs)
 4. [Symmetric Tree](./MinimumAndMaximumDepth//SymmetricTree.cs)
 5. [Balanced Binary Tree](./MinimumAndMaximumDepth/BalancedBinaryTree.cs)
+
+
+## Side views
+1. [Binary Tree Left Side View](./SideViews/LeftViewBinaryTree.cs)
+2. [Find Bottom Left Tree Value ](./SideViews/FindBottomLeftTreeValue.cs)
