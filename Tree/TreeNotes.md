@@ -44,6 +44,41 @@ public void PreOrderTraversalRecursive(TreeNode root,List<int> result)
 }
 ```
 
+#### Morris Preorder Traversal
+    approach : 
+        We will create a threaded binary tree , where rightmost node in the left child of a node will point to the node itself and it will be used to go back to the node after left child traversal if finished 
+        
+        algorithm :
+
+    ``` markdown
+    ``` csharp
+        if(root.left == null)
+        {
+            Print(root.value);
+            root = root.right;
+        }
+        else{
+            TreeNode temp = root.left;
+            while(temp.right != null && temp.right != root)
+            {
+                temp = temp.right;
+            }
+            if(temp.right == null)
+            {
+                Print(root.value);
+                // before processing the left child , add root to the result
+                temp.right = root;
+                root = root.left;
+            }
+            else{
+                temp.right = null;
+                root = root.right;
+            }
+        }
+    ```
+    Time complexity : O(n)
+    Space complexity : O(1)
+
 ### Inorder Traversal
 
 left child -> root -> right child
@@ -96,6 +131,41 @@ public void InOrderTraversalRecursive(TreeNode root,List<int> result)
     InOrderTraversalRecursive(root.right,res);
 }
 ```
+
+#### Morris Inorder Traversal
+    approach : 
+        We will create a threaded binary tree , where rightmost node in the left child of a node will point to the node itself and it will be used to go back to the node after left child traversal if finished 
+        
+        algorithm :
+
+    ``` markdown
+    ``` csharp
+        if(root.left == null)
+        {
+            Print(root.value);
+            root = root.right;
+        }
+        else{
+            TreeNode temp = root.left;
+            while(temp.right != null && temp.right != root)
+            {
+                temp = temp.right;
+            }
+            if(temp.right == null)
+            {
+                temp.right = root;
+                root = root.left;
+            }
+            else{
+                Print(root.value);
+                // after processing the left child , add root to the result
+                temp.right = null;
+                root = root.right;
+            }
+        }
+    ```
+    Time complexity : O(n)
+    Space complexity : O(1)
 ### Post order traversal
 left child -> right child -> root
 
