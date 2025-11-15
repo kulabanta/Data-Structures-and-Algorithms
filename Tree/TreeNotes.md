@@ -329,3 +329,10 @@ public List<int> ZigZagLevelOrderTraversal(TreeNode root)
 8. [Maximum width of Binary tree](./Tree/TreeTraversal/MaxWidthOfBinaryTree.cs)
 9. [Preorder Inorder Postorder traversal using one stack](./Tree/TreeTraversal/PreInPostOrderInSingleStackIteration.cs)
 10. [Vertical order Traversal of binary tree](./Tree/TreeTraversal/VerticalOrderTraversalOfBinaryTree.cs)
+
+## Binary Tree
+1. [Binary Tree Max Path Sum](./Tree/BinaryTree/BinaryTreeMaxPathSum.cs)
+2. [Lowest Common Ancestor in a Binary tree](./Tree/BinaryTree/LowestCommonAncestorInABinaryTree.cs)
+3. [Same Tree](./Tree/BinaryTree/SameTree.cs)
+4. [Balanced binary tree](./Tree/BinaryTree/BalancedBinaryTree.cs)
+5. [Diameter of a binary tree](./Tree/BinaryTree/DiameterOfABinaryTree.cs) 
