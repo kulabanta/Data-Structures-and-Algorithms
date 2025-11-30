@@ -307,7 +307,88 @@ public List<int> ZigZagLevelOrderTraversal(TreeNode root)
     return res;
         
 }
+
 ```
+## 🌳 Types of Binary Trees
+### 1. Full Binary Tree
+
+A **Full Binary Tree (also called a Proper or Strict binary tree)** is a tree where:
+- Every node has either 0 or 2 children
+- No node has only one child
+
+**✔️ Characteristics**
+1. Leaf nodes may appear at different levels
+2. Internal nodes always have exactly 2 children
+
+**📘 Example**
+```mathematica
+        A
+      /   \
+     B     C
+    / \   / \
+   D   E F   G
+```
+### 2. Complete Binary Tree
+
+A **Complete Binary Tree** is a tree where:
+- All levels except possibly the last are completely filled
+- The last level is filled from left to right without gaps
+
+**✔️ Characteristics**
+1. Structured like an array representation of a heap
+2. Never has “holes” in the left side
+
+**📘 Example**
+```mathematica
+        A
+      /   \
+     B     C
+    / \   /
+   D   E F
+```
+### 3. Perfect Binary Tree
+
+A **Perfect Binary Tree** is a tree where:
+- All internal nodes have exactly 2 children
+- All leaf nodes are at the same depth
+- All levels are fully filled
+
+**✔️ Characteristics**
+1. Most ideal and symmetric form of binary tree
+2. Number of nodes = 2^(h+1) − 1 (where h = height)
+3. Number of leaf nodes = 2^h
+
+**📘 Example**
+```mathematica
+        A
+      /   \
+     B     C
+    / \   / \
+   D   E F   G
+```
+This is perfect because every level is full.
+
+### 4. Balanced Binary Tree
+
+A **Balanced Binary Tree** is a tree where:
+- The height difference between the left and right subtrees of any node is at most 1
+- Height is kept minimal for efficient operations
+
+**✔️ Characteristics**
+1. Ensures `O(log n)` search, insert, delete
+2. `AVL Trees` and `Red-Black` Trees are types of balanced trees
+
+**📘 Example (height-balanced)**
+```mathematica
+        A
+      /   \
+     B     C
+    / \
+   D   E
+```
+Left subtree height = 2<br>
+Right subtree height = 1<br>
+Difference = 1 → **Balanced**
 
 ## Minimum and Maximum Depth 
 **Questions**</br>
