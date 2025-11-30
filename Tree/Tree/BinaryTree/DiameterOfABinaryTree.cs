@@ -1,6 +1,6 @@
 ﻿using DsaPreparation.Tree.Tree;
 
-namespace Tree.Tree.TreeTraversal
+namespace Tree.Tree.BinaryTree
 {
     public class DiameterOfABinaryTree
     {
