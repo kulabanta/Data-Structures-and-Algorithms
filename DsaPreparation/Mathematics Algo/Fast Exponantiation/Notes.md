@@ -87,9 +87,12 @@ Formula:
             if (b % 2 == 1)
             {
                 ans = (ans * a)%m;
+                b = b-1;
             }
+            else{
             a = (a * a)%m;
-            n = n / 2;
+            b = b / 2;
+          }
         }
         return ans;
     }
