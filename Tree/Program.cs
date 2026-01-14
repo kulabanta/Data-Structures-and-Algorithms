@@ -27,20 +27,21 @@ namespace Tree
             //    Console.WriteLine();
             //}
 
-            Person p = new()
-            {
-                name = "kula",
-                age = 20
-            };
-            Console.WriteLine($"name : {p.name}, age : {p.age}");
-            ChangePerson(p);
-            Console.WriteLine($"name : {p.name}, age : {p.age}");
-            string name = "kula";
-            Console.WriteLine($"name : {name}");
-            ChangeName(name);
-            Console.WriteLine($"name : {name}");
+            //Person p = new()
+            //{
+            //    name = "kula",
+            //    age = 20
+            //};
+            //Console.WriteLine($"name : {p.name}, age : {p.age}");
+            //ChangePerson(p);
+            //Console.WriteLine($"name : {p.name}, age : {p.age}");
+            //string name = "kula";
+            //Console.WriteLine($"name : {name}");
+            //ChangeName(name);
+            //Console.WriteLine($"name : {name}");
 
-
+            //ParallelAndBatchTask operation = new();
+            //operation.PerformBatchAndParallelOperations(1000, 20, 3);
         }
         public static void ChangePerson(Person p)
         {
