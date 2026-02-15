@@ -2,3 +2,8 @@
 
 next :
 1. sort array by parity 2
+
+
+Sliding window 
+1. Number of Subarrays with Bounded Maximum - done
+2. Find K-th Smallest Pair Distance
